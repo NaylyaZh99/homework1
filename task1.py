@@ -110,28 +110,6 @@ class DoubleList:
             self.push_back(val)
             num //= 10
 
-    def TwoNumFromString(self, L2, string):
-        count = 0
-        while string[count] != '+':
-            if string[count] >= '0' and string[count] <= '9':
-                self.push_front(int(string[count]))
-            count += 1
-        while string[count] != ')':
-            if string[count] >= '0' and string[count] <= '9':
-                L2.push_front(int(string[count]))
-            count += 1
-
-    def list2int(self):
-        if self.head == None:
-            return -1
-        current = self.head
-        res = 0
-        while current != None:
-            res *= 10
-            res += current.value
-            current = current.next
-        return res
-
 
 L = DoubleList()
 L.push_back(1)
